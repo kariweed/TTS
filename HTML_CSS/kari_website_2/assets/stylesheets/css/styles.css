@@ -1,0 +1,81 @@
+
+
+#content {
+	width: auto;
+	margin: auto;
+	background-color: #D3A3F8
+}
+
+h1 {
+	text-align: center;
+	font-family: Georgia;
+	color: #3C0565;
+}
+
+h3 {
+	text-align: center;
+	font-family: Georgia;
+	padding: 0px;
+	margin: 0px;
+	color: #3C0565;
+	text-decoration: underline;
+}
+
+h5 {
+	text-align: left;
+	font-family: Georgia;
+	padding: 0px;
+	margin: 0px;
+	color: #3C0565;
+}
+
+
+p {
+	color: #3C0565;
+	text-align: justify;
+	font-family: Georgia;
+	float: right;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-top: 0;
+}
+
+#footer {
+	height: 20px;
+	width: auto;
+	text-align: left;
+	background-color: #D3A3F8;
+	color: #3C0565;
+	font: 8px;
+	padding: 20px;
+	margin: auto;
+}
+
+#navbar {
+	background-color: #D3A3F8;
+	color: #3C0565;
+	height: 50px;
+}
+
+#img1 {
+	width: 40%;
+	float: center;
+}
+
+#navbar-custom {
+    background-color: #D3A3F8;
+    color: #3C0565;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #3C0565;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #3C0565;
+    background-color:transparent;
+}
+.navbar-custom .navbar-brand {
+    color: #3C0565;
+}
+

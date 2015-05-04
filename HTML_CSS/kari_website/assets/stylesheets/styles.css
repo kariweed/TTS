@@ -1,0 +1,39 @@
+
+
+body {
+	width: 900px;
+	margin: auto;
+	background-color: #D3A3F8
+}
+
+h1 {
+	text-align: center;
+	color: #3C0565;
+}
+
+ h3 {
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	color: #3C0565;
+	text-decoration: underline;
+}
+
+h5 {
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	color: #3C0565;
+}
+
+
+p {
+	color: #3C0565;
+	text-align: justify;
+	font-family: Georgia;
+	float: right;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-top: 0;
+}
+

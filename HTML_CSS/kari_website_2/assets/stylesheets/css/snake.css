@@ -1,0 +1,16 @@
+body {
+	max-width: 100%;
+	text-align: center;
+	font-family: "GEORGIA";
+	background-color: #CA46D6;
+	color: #137132;
+	}
+
+	canvas{
+		border: solid #137132 2px;
+	}
+
+h3 {
+	text-align: left;
+	font-family: "GEORGIA"
+}

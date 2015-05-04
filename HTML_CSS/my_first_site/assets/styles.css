@@ -1,0 +1,11 @@
+body {
+	width: 900px;
+	margin: auto;
+	background-color: green;
+}
+
+p {
+	color: purple;
+	text-align: center;
+	font-family: Georgia
+}
