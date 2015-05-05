@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @name = 'Kari Ann Weed'
-    @message = 'Have a fabulous time!'
+    
+    @Home = Home.new
+    
   end
 end
