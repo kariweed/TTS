@@ -5,6 +5,17 @@
 # Time.zone = "UTC"
 
 activate :blog do |blog|
+
+
+# activate :deploy do |deploy|
+#   deploy.method = :git
+#   deploy.branch = 'gh-pages'
+#   deploy.build_before = true
+# end
+ 
+#activate :directory_indexes
+
+
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
@@ -28,16 +39,6 @@ activate :blog do |blog|
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
 end
-
-##set :relative_links, true
-
-# activate :deploy do |deploy|
-#   deploy.method = :git
-#   deploy.branch = 'gh-pages'
-#   deploy.build_before = true
-# end
- 
-# activate :directory_indexes
 
 page "/feed.xml", layout: false
 
@@ -79,7 +80,7 @@ page "/feed.xml", layout: false
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
- activate :livereload
+# activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -106,8 +107,8 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-   activate :relative_assets
-   set :relative_links, true
+  activate :relative_assets
+  set :relative_links, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
