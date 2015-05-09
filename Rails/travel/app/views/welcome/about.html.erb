@@ -4,6 +4,9 @@
   }
 </style>
 
+<%= link_to "Blue", {controller: "welcome", action: "about", color: "blue"}, class: "btn btn-primary" %>
+
+
 <h1>About Me</h1>
 <p>Loads of interesting information about moi!</p>
 <p>My favorite color is <%= @color %>.</p>
