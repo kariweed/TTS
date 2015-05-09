@@ -11,27 +11,12 @@
 	<% end %>
 </ul>
 
-<!--
-<% @destinations.each do |destination| %>
-  <h2> <%= destination.city %> </h2>
-  <h3> <%= destination.country %> </h3>
-  <p> <%= destination.description %> </p>
-  <% end %>
--->
-
-	<% @images.each  do |photo| %>
+<% @images.each  do |photo| %>
 	<p> <%= image_tag photo, class: "img-responsive" %> </p>
-	<% end %>
+<% end %>
 
-
-<!--This was the original way that we added
-	pictures to the index page....
-	Then, we updated the code to run thru an
-	array and loop thru the pic files which are stored in 'welcome_controller.rb'
-<%= image_tag "italy.jpg", alt: "Italian seaside village", id: "italy", class: "country", height: "50%", width: "50%" %> -->
-<!--
-<%= image_tag "france.jpg", alt: "Eiffel Tower at night", id: "france", class: "country", height: "50%", width: "50%" %> -->
-
-<%= image_tag "canada.jpg", alt: "Glacier Lake", id: "canada", class: "country", height: "50%", width: "50%"%>
-
-<%= image_tag "spain.jpg", alt: "Spanish seaside", id: "spain", class: "country", height: "50%", width: "50%"%> -->
+<% @destinations.each do |destination| %>
+  <h2><%= destination.city %></h2>
+  <h3><%= destination.country %></h3>
+  <p><%= destination.description %></p>
+<% end %>
