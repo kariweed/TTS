@@ -14,6 +14,8 @@
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" %>
+
+<link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
   
   <%= csrf_meta_tags %>
 </head>
@@ -37,9 +39,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active">
-        	<%= link_to "Home", 'welcome.index.html.erb' %></li>
-        	<li><%= link_to "About", 'about.html.erb' %>
-          <li><%= link_to "Destinations", 'destinations.index.html.erb' %> </li>
+        	<%= link_to "Home", root_path %></li>
+        	<li><%= link_to "About", about_path %>
+          <li><%= link_to "Destinations", destinations_path %> </li>
+          <li><%= link_to "Contact Me", contact_path %></li>
         </li>
       </ul>
     <!--    	<a href="#">Home <span class="sr-only">(current)</span></a></li>

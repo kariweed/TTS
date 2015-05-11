@@ -5,18 +5,31 @@
 
 <p>I also plan to travel to these beautiful countries as well: </p> 
 
+
 <ul> 
 <% @countries.each do |country| %>
-	<li> <%= country %> </li>
-	<% end %>
+  <li><%= country %></li>
+  <% end %>
 </ul>
 
-<% @images.each  do |photo| %>
-	<p> <%= image_tag photo, class: "img-responsive" %> </p>
+<% @images.each do |photo| %>
+  <p> <%= image_tag photo, class: "img-responsive" %> </p>
 <% end %>
 
-<% @destinations.each do |destination| %>
-  <h2><%= destination.city %></h2>
-  <h3><%= destination.country %></h3>
-  <p><%= destination.description %></p>
-<% end %>
+
+<table class="table">
+  <tr>
+    <% @united_states.each do |key,value| %>
+	  <th><%= key.titleize %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @united_states.each do |key,value| %>      
+      <% if value.kind_of?(Array) %>
+          <td><%= value.join(", ") %></td>
+      <% else %>
+         <td><%= value %></td>
+      <% end %> 
+    <% end %>
+  </tr>
+</table>
