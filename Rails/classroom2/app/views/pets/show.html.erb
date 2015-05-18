@@ -1,0 +1,21 @@
+<% if notice != nil %>
+  <p id="notice" class="alert alert-success" role="alert">
+    <%= notice %>
+  </p>
+<% end %>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @pet.animal %>
+</p>
+
+<p>
+  <strong>Favorite:</strong>
+  <%= @pet.favorite %>
+</p>
+
+
+<div class="btn-group">
+<%= link_to 'Edit', edit_pet_path(@pet), class: "btn btn-default" %> |
+<%= link_to 'Back', pets_path, class: "btn btn-default" %>
+</div>

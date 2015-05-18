@@ -11,19 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="field form-group">
+    <%= f.text_field :title, class: "form-control", placeholder: 'Title' %>
   </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
+  <div class="field form-group">
+    <%= f.text_field :author, class: "form-control", placeholder: 'Author' %>
   </div>
-  <div class="field">
-    <%= f.label :blog_entry %><br>
-    <%= f.text_area :blog_entry %>
+  <div class="field form-group">
+    <%= f.text_area :blog_entry, class: "form-control", placeholder: 'Blog Entry Text' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field form-group">
+   
+  <div class="actions form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>

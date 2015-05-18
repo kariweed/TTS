@@ -1,0 +1,30 @@
+<% if notice != nil %>
+  <p id="notice" class="alert alert-success" role="alert">
+    <%= notice %>
+  </p>
+<% end %>
+
+<p>
+  <strong>First name:</strong>
+  <%= @student.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @student.last_name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @student.age %>
+</p>
+
+<p>
+	<strong>Grade:</strong>
+	<%= @student.grade %>
+</p>
+
+<div class="btn-group">
+<%= link_to 'Edit', edit_student_path(@student), class: "btn btn-default" %> |
+<%= link_to 'Back', students_path, class: "btn btn-default" %>
+</div>
