@@ -2,5 +2,9 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @blog_post %> |
-<%= link_to 'Back', blog_posts_path %>
+<div class="btn-group">
+<%= link_to 'Show', @blog_post, class: "btn btn-default" %> 
+<%= link_to 'Back', blog_posts_path, class: "btn btn-default" %>
+</div>
+
+

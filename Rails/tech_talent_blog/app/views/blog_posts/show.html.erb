@@ -5,7 +5,7 @@
 		<%= @blog_post.title %>
 	</div>
 	<div class="panel-body">
-		<p>by: <%= @blog_post.author %> on <%= @blog_post.created_at.strftime("%A, %B, %e, %Y, at %r") %></p>
+		by: <strong><%= @blog_post.user.email %></strong> on <%= @blog_post.created_at.strftime("%A, %B, %e, %Y, at %r") %></p>
 		<p><%= @blog_post.blog_entry %></p>
 	</div>
 </div>
@@ -25,7 +25,7 @@
 	</div>
 	<% @blog_post.comments.each do |comment| %>
 	<div class="panel-body">
-		<p><strong><%= comment.author %></strong> said <%= time_ago_in_words(comment.created_at) %> ago: </p>
+		<p><strong><%= comment.user.email %></strong> said <%= time_ago_in_words(comment.created_at) %> ago: </p>
 		<p><%= comment.comment_entry %></p>
 	</div>
 	<% end %>
@@ -35,31 +35,4 @@
 	<%= link_to 'Edit', edit_blog_post_path(@blog_post), class: "btn btn-default" %> 
 	<%= link_to 'Back', blog_posts_path, class: "btn btn-default" %>
 </div>
-
-<!-- <p>
-  <strong>Title:</strong>
-  <%= @blog_post.title %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @blog_post.author %>
-</p>
-
-<p>
-  <strong>Blog entry:</strong>
-  <%= @blog_post.blog_entry %>
-</p>
-
-<div>
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> 
-</div>
-
-<div>
-	<%= render 'comments/form' %>
-</div>
-
-<div>
-<%= link_to 'Back', blog_posts_path %>
-</div> -->
 

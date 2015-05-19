@@ -14,12 +14,16 @@
   <div class="field form-group">
     <%= f.text_field :title, class: "form-control", placeholder: 'Title' %>
   </div>
-  <div class="field form-group">
+  <!-- <div class="field form-group">
     <%= f.text_field :author, class: "form-control", placeholder: 'Author' %>
-  </div>
+  </div> -->
   <div class="field form-group">
     <%= f.text_area :blog_entry, class: "form-control", placeholder: 'Blog Entry Text' %>
   </div>
+  <div class="field form-group cant-see-me">
+    <%= f.number_field :user_id, value: current_user.id %>
+  </div>
+
   <div class="field form-group">
    
   <div class="actions form-group">
