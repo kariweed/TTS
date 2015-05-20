@@ -1,26 +1,33 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TechTalentBlog</title>
 
-<h1>Current Blog Posts</h1>
+<body>
+<h3> <%= @user.username %>'s Page </h3>
 
-Welcome <%= current_user.username %>!
+<div class="">
+  <p><strong>Name:</strong> <%= @user.name %></p>
+  <p><strong>Location:</strong> <%= @user.location %></p>
+  <p><strong>Birthday:</strong> <%= @user.birthday.strftime("%m/%d/%Y") %></p>
 
-<div class="row">
-  <% @blog_posts.each do |blog_post| %>
-  <div class="col-md-6">
+
+
+
+  <% current_user.blog_posts.each do |blog_post| %>
+  <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading">
         <%= link_to blog_post.title, blog_post %>
       </div>
       <div class="panel-body">
-        by: <%= link_to blog_post.user.username, user_profile_path(id: blog_post.user.id) %><br />
+        by: <%= blog_post.user.username %><br />
         <p><%= blog_post.blog_entry.first(300) %>...<%= link_to '(Read More)', blog_post %></p>
       </div>
-      <% if current_user.id == blog_post.user.id %>
       <div class="panel-footer">
         <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
         <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
       </div>
-      <% end %>
     </div>
   </div>
   <% end %>
@@ -32,3 +39,7 @@ Welcome <%= current_user.username %>!
 <div class="btn-group">
 <%= link_to 'New Blog post', new_blog_post_path, class: "btn btn-default" %>
 </div>
+
+
+</body>
+</html>

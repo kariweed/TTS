@@ -6,6 +6,14 @@ class BlogPostsController < ApplicationController
     #We'll use association (via current_user)
   end
 
+  def user_profile
+    @user = User.find(params[:id])
+    #in the link to this page we'll pass
+    #the user's ID #, the use association
+    #to bring up their blog posts
+  end
+
+
   # GET /blog_posts
   # GET /blog_posts.json
   def index

@@ -33,6 +33,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-left">
 				<li><%= link_to "Your Posts", your_posts_path %></li>
+				<li><%= link_to "Make a New Post", new_blog_post_path %></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li><%= link_to "Edit Profile", edit_user_registration_path %>
@@ -59,7 +60,7 @@
 </nav>
 <% end %>
 
-<div class="contatiner">
+<div class="container">
 
  <%= yield %>
 </div>
