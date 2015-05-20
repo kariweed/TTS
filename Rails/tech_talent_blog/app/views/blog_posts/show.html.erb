@@ -5,7 +5,7 @@
 		<%= @blog_post.title %>
 	</div>
 	<div class="panel-body">
-		by: <strong><%= @blog_post.user.email %></strong> on <%= @blog_post.created_at.strftime("%A, %B, %e, %Y, at %r") %></p>
+		by: <strong><%= @blog_post.user.username %></strong> on <%= @blog_post.created_at.strftime("%A, %B, %e, %Y, at %r") %></p>
 		<p><%= @blog_post.blog_entry %></p>
 	</div>
 </div>
@@ -25,7 +25,7 @@
 	</div>
 	<% @blog_post.comments.each do |comment| %>
 	<div class="panel-body">
-		<p><strong><%= comment.user.email %></strong> said <%= time_ago_in_words(comment.created_at) %> ago: </p>
+		<p><strong><%= comment.user.username %></strong> said <%= time_ago_in_words(comment.created_at) %> ago: </p>
 		<p><%= comment.comment_entry %></p>
 	</div>
 	<% end %>
