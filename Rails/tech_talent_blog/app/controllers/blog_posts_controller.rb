@@ -1,6 +1,11 @@
 class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
 
+  def your_posts
+    #Don't even need anything in here!
+    #We'll use association (via current_user)
+  end
+
   # GET /blog_posts
   # GET /blog_posts.json
   def index
