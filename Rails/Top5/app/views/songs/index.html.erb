@@ -1,8 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Songs</h1>
+<h1>My Songs</h1>
+<p><%= link_to new_song_path do %>
+  <span class="glyphicon glyphicon-plus"></span> Add
+  <% end %>
+</p>
 
-<table>
+
+<div class="row">
+  <% @songs.each do |song| %>
+  <div class="col-md-6">
+    <div class="well">
+      <h2><%= link_to song.name, song %></h2>
+      <h4><%= song.rating %></h4>
+          <p>
+            <%= link_to 'Edit', edit_song_path(song) %> |
+            <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -24,7 +44,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 
