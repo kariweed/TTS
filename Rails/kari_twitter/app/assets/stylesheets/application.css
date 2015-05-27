@@ -17,3 +17,8 @@
 .cant-see-me {
 	display: none;
 }
+
+body {
+	background: url(<%= asset_path 'bg.png' %>) no-repeat;
+	background-color: rgba (180,216,234,0.8);
+}

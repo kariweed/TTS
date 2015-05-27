@@ -1,10 +1,10 @@
 <h1>Your Twitter Feed</h1>
-<p>Hello <%= current_user.name %>!</p>
+<h3>Hello <%= current_user.name %>!</h3>
 <p>Here is what your friends are saying: </p>
 
 <div>
 	<% @following_tweets.each do |f| %>
-	</div>
+	<div>
 		<p><%= f.message %></p>
 		<p><strong><em><%= f.user.username %></em></strong></p>
 	</div>

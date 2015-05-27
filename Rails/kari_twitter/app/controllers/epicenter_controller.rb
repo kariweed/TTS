@@ -29,6 +29,9 @@ class EpicenterController < ApplicationController
   def name
   end
 
+  def js_practice
+  end
+
   def show_user
     @user = User.find(params[:id])
   end
@@ -47,6 +50,8 @@ class EpicenterController < ApplicationController
 
     current_user.save
     # Then we save it in our database.
+
+    redirect_to user_profile_path(id: @user.id)
   end
 
   def unfollow
@@ -55,5 +60,8 @@ class EpicenterController < ApplicationController
     current_user.following.delete(params[:unfollow_id].to_i)
 
     current_user.save
+
+    redirect_to user_profile_path(id: @user.id)
+
   end
 end

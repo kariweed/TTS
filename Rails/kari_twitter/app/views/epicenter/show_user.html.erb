@@ -26,7 +26,7 @@
 	<div>
 		<%= form_tag('/now_following') do %>
 		<span class="cant-see-me">
-			<%= number_field_tag :follow_id, @user.id %>
+			<%= text_field_tag :follow_id, @user.id %>
 		</span><br />
 		<%= submit_tag 'Follow', class: 'btn btn-primary' %>
 		<% end %>
