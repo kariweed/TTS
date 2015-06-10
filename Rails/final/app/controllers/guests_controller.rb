@@ -5,6 +5,12 @@ class GuestsController < ApplicationController
   # GET /guests.json
   def index
     @guests = Guest.all
+    # render :file => 'app\views\guests\uploadfile.rhtml'
+  end
+
+  def uploadFile
+    post = guest.save(params[:upload])
+    render :text => "Your file was uploaded successfully"
   end
 
   # GET /guests/1

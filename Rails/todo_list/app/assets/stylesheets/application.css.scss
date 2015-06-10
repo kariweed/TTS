@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "bootstrap-datetimepicker";
+@import 'bootstrap-datetimepicker';
 
 body {
   background: rgb(197, 221, 224);
@@ -19,11 +19,11 @@ h2 {
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-	background: none;
-	text-decoration:line-through;
-	color: #336699;
+  background: none;
+  text-decoration:line-through;
+  color: #336699;
 }

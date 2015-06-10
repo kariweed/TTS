@@ -30,6 +30,9 @@ gem 'roo-google'
 gem 'paperclip'
 gem 'responders'
 
+gem 'refile', require: 'refile/rails'
+gem 'refile-mini_magick'
+
 # gem 'wicked_pdf'
 
 # gem 'wkhtmltopdf-binary'

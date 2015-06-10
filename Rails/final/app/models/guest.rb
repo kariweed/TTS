@@ -5,4 +5,10 @@ class Guest < ActiveRecord::Base
              "application/msword", 
              "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
              "text/plain"]
+  def self.save(upload)
+  	name = upload('guest').original_filename
+  	directory = "public/data"
+  	path = File.join(directory, name)
+  	File.open(path, "wb") { |g| g.write(upload['guest'].read)}
+  end
 end

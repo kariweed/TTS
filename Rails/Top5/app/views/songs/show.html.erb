@@ -1,19 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @song.name %>
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="well">
+    	<h3>Name: <%= @song.name %></h3>
+    	<h3>Rating: <%= @song.rating %></h3>
+    	<h3>Artist: <%= @song.artist %></h3>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @song.rating %>
-</p>
-
-<p>
-  <strong>Artist:</strong>
-  <%= @song.artist %>
-</p>
-
+<%= link_to "Add New Artist", new_artist_path, class: "btn btn-primary" %>
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>

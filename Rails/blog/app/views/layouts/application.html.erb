@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blog</title>
+
+
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav nav-tabs">
+  		<li role="presentation" class="active"><a href="#">Home</a></li>
+  		<li role="presentation"><a href="#">Link</a></li>
+  		<li role="presentation"><a href="#">Link</a></li>
+    <div class="pull-right">
+      <% if user_signed_in? %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+      <% end %>
+    </ul>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

@@ -18,7 +18,10 @@
 	display: none;
 }
 
-body {
-	background: url(<%= asset_path 'bg.png' %>) no-repeat;
-	background-color: rgba (180,216,234,0.8);
+/*body {
+	background-color: rgba(113,227,245,0.8);
+}*/
+
+.small-text {
+	font-size: .75em;
 }

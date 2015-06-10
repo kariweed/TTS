@@ -23,8 +23,8 @@ class TweetsController < ApplicationController
   def edit
   end
 
-  # def username
-  # end
+  def username
+  end
   
 
   # POST /tweets

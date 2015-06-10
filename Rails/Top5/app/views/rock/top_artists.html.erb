@@ -1,0 +1,12 @@
+<div class="row">
+  <h2> Top 5 Artists</h2>
+    <% @artists.each do |artist| %>
+      <div class="well well-lg">
+        <h2><%= artist.name %></h2>
+	<p><% "#{artist.rating}".to_i.times do |rank| %>
+	  <span class="glyphicon glyphicon-star"></span>
+        <% end %>
+        </p>	             
+     </div>
+  <% end %>
+</div>

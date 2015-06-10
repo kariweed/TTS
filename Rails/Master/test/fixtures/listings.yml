@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_owner: MyString
+  account_title: MyString
+  account_number: 1
+  account_balance: 1
+  web_address: MyString
+
+two:
+  account_owner: MyString
+  account_title: MyString
+  account_number: 1
+  account_balance: 1
+  web_address: MyString

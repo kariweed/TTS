@@ -1,9 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="well">
+      <%= image_tag @artist.avatar.url(:medium), class: "img-responsive" %>
+      <h1><%= @artist.name %></h1>
+
+	<% @artist.songs.each do |song| %>
+	  <h3><%= link_to song.name, song %></a></h3>
+	<% end %>
+    </div>
+  </div>
+</div>
+
+
+<!-- <p>
   <strong>Name:</strong>
   <%= @artist.name %>
 </p>
-
+ -->
+<%= link_to "Add New Artist", new_artist_path, class: "btn btn-primary" %>
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

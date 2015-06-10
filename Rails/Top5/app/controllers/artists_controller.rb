@@ -1,10 +1,14 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
+end
 
   # GET /artists
   # GET /artists.json
   def index
-    @artists = Artist.all
+    if params[:song] == nil
+      @artists = Artist.all
+    else
+      @artists = Artist.where(song: params[:song])
   end
 
   # GET /artists/1
@@ -55,6 +59,8 @@ class ArtistsController < ApplicationController
   # DELETE /artists/1.json
   def destroy
     @artist.destroy
+    @artist.songs.each do |song| song.destroy 
+    end
     respond_to do |format|
       format.html { redirect_to artists_url, notice: 'Artist was successfully destroyed.' }
       format.json { head :no_content }
@@ -69,6 +75,6 @@ class ArtistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
-      params.require(:artist).permit(:name)
+      params.require(:artist).permit(:name, :avatar)
     end
 end
